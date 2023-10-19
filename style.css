@@ -29,6 +29,8 @@ form input[type="text"] {
   font-size: 18px;
   width: 60%;
   outline: none;
+  background-color: gainsboro;
+  color: #192735;
 }
 
 form input[type="submit"] {
@@ -88,6 +90,9 @@ form input[type="submit"]:active {
 }
 
 @media (max-width: 600px) {
+  .container h1 {
+    margin-bottom: 10px;
+  }
   form input[type="text"] {
     padding: 4px;
     font-size: 15px;
@@ -107,11 +112,12 @@ form input[type="submit"]:active {
     font-size: 25px;
     font-weight: bold;
     margin: 0 0;
+    margin: 10px 0;
   }
 
   .description {
     font-size: 15px;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
 
   .details > div {
