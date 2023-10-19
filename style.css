@@ -5,6 +5,7 @@ body {
 }
 
 .container {
+  position: relative;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   text-align: center;
   max-width: 600px;
@@ -54,6 +55,35 @@ form input[type="submit"]:active {
   color: #192735;
 }
 
+/*------------animation styling start--------------*/
+.loader {
+  font-family: cursive;
+  font-size: 40px;
+  color: gainsboro;
+  font-size: 18px;
+  display: none;
+}
+
+.loader::after {
+  content: "\2026";
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  animation: dots steps(4, end) 2s infinite;
+  width: 0px;
+}
+
+@keyframes dots {
+  to {
+    width: 1.25em;
+  }
+}
+/*------------animation styling end--------------*/
+
+.weatherData {
+  opacity: 0;
+  display: none;
+}
 .icon img {
   width: 100px;
   height: 100px;

@@ -3,10 +3,17 @@ let weatherData = document.getElementById("weather-data");
 let cityInput = document.getElementById("city-input");
 let formEl = document.querySelector("form");
 
+let loader = document.querySelector(".loader");
+
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
   let cityValue = cityInput.value;
-  getWeatherData(cityValue);
+  loader.style.display = "block";
+  setTimeout(() => {
+    getWeatherData(cityValue);
+    loader.style.display = "none";
+    weatherData.style.display = "block";
+  }, 4000);
   cityInput.value = "";
 });
 
@@ -21,7 +28,6 @@ async function getWeatherData(cityValue) {
     }
 
     let data = await response.json();
-    console.log(data);
     let temperature = Math.round(data.main.temp);
     let description = data.weather[0].description;
     let icon = data.weather[0].icon;

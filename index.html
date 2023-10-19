@@ -10,9 +10,18 @@
     <div class="container">
       <h1>Weather App</h1>
       <form>
-        <input type="text" placeholder="Enter city" id="city-input" />
+        <input
+          type="text"
+          placeholder="Enter city"
+          id="city-input"
+          autocomplete="off"
+        />
         <input type="submit" value="Get Weather" />
       </form>
+
+      <!------------------loading animation--------------->
+      <div class="loader">loading</div>
+      <!------------------loading animation--------------->
 
       <div id="weather-data">
         <div class="icon">
