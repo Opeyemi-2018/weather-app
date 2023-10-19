@@ -29,6 +29,7 @@ form input[type="text"] {
   font-size: 18px;
   width: 60%;
   outline: none;
+  border: none;
   background-color: gainsboro;
   color: #192735;
 }
@@ -92,12 +93,11 @@ form input[type="submit"]:active {
 }
 
 @media (max-width: 600px) {
-  .container h1 {
-    margin-bottom: 10px;
-  }
   form input[type="text"] {
     padding: 6px;
     font-size: 15px;
+
+    width: 80%;
   }
 
   form input[type="submit"] {
@@ -113,8 +113,6 @@ form input[type="submit"]:active {
   .temperature {
     font-size: 25px;
     font-weight: bold;
-    margin: 0 0;
-    margin: 10px 0;
   }
 
   .description {
