@@ -92,6 +92,12 @@ form input[type="submit"]:active {
   background-position: center;
 }
 
+.city-name{
+  color: gainsboro;
+  font-size: 25px;
+  font-weight: bold;
+}
+
 .temperature {
   font-size: 48px;
   font-weight: bold;

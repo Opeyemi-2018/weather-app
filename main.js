@@ -1,3 +1,4 @@
+
 // Define an API key for OpenWeatherMap
 let apiKey = "de3e6377d674cfd41f65e07f4f5c62e2";
 
@@ -62,7 +63,7 @@ async function getWeatherData(cityValue) {
    src="http://openweathermap.org/img/wn/${icon}.png"
    alt="Weather icon"
  />`;
-
+   weatherData.querySelector(".city-name").innerHTML = cityValue
     weatherData.querySelector(".temperature").innerHTML = `${temperature}°C`;
     weatherData.querySelector(".description").innerHTML = description;
 
