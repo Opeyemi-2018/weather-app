@@ -17,24 +17,14 @@ formEl.addEventListener("submit", (event) => {
 
   // Get the value of the city input
   let cityValue = cityInput.value;
-
-  // Display the loader while fetching data
-  loader.style.display = "block";
-
-  // Use setTimeout to delay the execution of getWeatherData function
-  setTimeout(() => {
-    getWeatherData(cityValue);
-
-    // Hide the loader, display weather data
-    loader.style.display = "none";
-    weatherData.style.display = "block";
-  }, 4000); // Delay for 4 seconds
+  getWeatherData(cityValue);
   cityInput.value = ""; // Clear the input field after submission
 });
 
 // Define an asynchronous function to fetch weather data
 async function getWeatherData(cityValue) {
   try {
+    loader.style.display = "block"
     // Use the Fetch API to make a GET request to the OpenWeatherMap API
     let response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apiKey}&units=metric`
@@ -47,6 +37,7 @@ async function getWeatherData(cityValue) {
 
     // Parse the response JSON data
     let data = await response.json();
+    loader.style.display = "none"
 
     // Extract weather information from the JSON data
     let temperature = Math.round(data.main.temp);
